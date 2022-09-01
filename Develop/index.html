@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="generate" class="btn">Generate Password</button>
+          <section class="criteria" id="criteria">
+            <form id="form">
+              <h3 class="form-title">Password Criteria</h3>
+              <section class="form-options">
+              <label for="pass-length">Choose password length</label>
+              <select id="pass-length" class= "select-length" >
+               <script>
+                  for (let i = 8; i<=128; i++){
+                    var tag=document.createElement("option");
+                    tag.textContent=i;
+                    tag.setAttribute("id","pass-length");
+                    tag.setAttribute("value",i);
+                    tag.setAttribute("label",i);
+                   var option = document.querySelector(".select-length");
+                   option.appendChild(tag);
+                  }
+               </script>
+              </select>
+              <input type="checkbox" id="uppercase" value="uppercase"> 
+              <label for="uppercase">Uppercase</label>
+              <input type="checkbox" id="lowercase" value="lowercase"> 
+              <label for="uppercase">Lowercase</label>
+              <input type="checkbox" id="numeric" value="numeric"> 
+              <label for="uppercase">Numeric</label>
+              <input type="checkbox" id="special" value="special"> 
+              <label for="uppercase">Special Characters</label>
+        
+            </section>
+            </form>
+            <button id="submit">Generate</button>
+          </section>
+        </div>
+      </div>
+     
+    </div>
+   
+    <script src="script.js"></script>
+  </body>
+</html>
