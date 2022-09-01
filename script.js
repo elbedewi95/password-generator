@@ -52,6 +52,9 @@ for (let index = 0; index < passLength; index++) {
 }
 writePassword();
 password="";
+for (let index = 0; index < array.length; index++) {
+  array.pop();
+}
 }
 
 
