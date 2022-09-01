@@ -1,6 +1,8 @@
 # password-generator
 Password generator created by Victoria El Bedewi on september 1st 2022. <br>
-How it works <br>
+Live URl: https://elbedewi95.github.io/password-generator/ <br>
+Git URL: https://github.com/elbedewi95/password-generator <br>
+<h1>How it works</h1> <br>
 <h2>Step 1</h2><br>
 Click Generate Password to select password Criteria <br>
 <img src="./images/step1.png"><br>
