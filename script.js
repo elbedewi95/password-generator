@@ -18,7 +18,7 @@ for (let index = 0; index < upper.length; index++) {
 var specialChar = ['~','`','!', '@','#','$','%','^','&','*','(',')','_','-','+','=','{','[','}',']','|','\\',':',';','"','<',',','>','.','?','/'];
 var numeric = ["1","2","3","4","5","6","7","8","9"];
 var array= [];
-
+var empty=[];
 
 // Write password to the #password input
 function writePassword() {
@@ -44,6 +44,9 @@ function generatePassword(){
   if(isChar){
     array.push(specialChar);
   }
+  if(!isUpper && !isLower && !isNumeric && !isChar){
+    alert("You need to chose at least one option");
+  }
   console.log(array.length);
 for (let index = 0; index < passLength; index++) {
   var randomArray = array[Math.floor(Math.random()*array.length)];
@@ -52,9 +55,13 @@ for (let index = 0; index < passLength; index++) {
 }
 writePassword();
 password="";
-for (let index = 0; index < array.length; index++) {
+
+while(array.length > 0) {
   array.pop();
 }
+
+console.log(array);
+return;
 }
 
 
